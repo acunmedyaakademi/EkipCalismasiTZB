@@ -31,6 +31,46 @@ const formData = document.querySelector(".search")
 const content = document.querySelector(".content")
 formData.addEventListener("submit", init)
 
+
+
+function getKullanici() {
+
+    return localStorage.setItem('kullanicilar', JSON.stringify(kullanicilar));
+
+}
+
+
+let kullanicilar = JSON.parse(localStorage.getItem('kullanicilar')) || []
+
+
+
+const yeniKullanicilar = qs(".yeniKullanici")
+
+
+function eskiKullanicilar() {
+
+    console.log(kullanicilar);
+
+    yeniKullanicilar.innerHTML = ""
+    for (const kullanici of kullanicilar) {
+
+
+        yeniKullanicilar.innerHTML = `
+            <h2>${kullanici.name}</h2>
+            <h2>${kullanici.lokasyon}</h2>
+            <h2>${kullanici.bio}</h2>
+         
+         `
+    }
+
+}
+
+
+
+
+
+
+
 async function getData(user) {
     const request = await fetch(`https://api.github.com/users/${user}`);
     const data = await request.json();
@@ -39,12 +79,25 @@ async function getData(user) {
 
 async function init() {
 
-    formData.addEventListener("submit",async function (e) {
+    formData.addEventListener("submit", async function (e) {
         e.preventDefault();
-        const searchValue=formData["arama"].value;
-        const data= await getData(searchValue);
+        const searchValue = formData["arama"].value;
+        const data = await getData(searchValue);
         console.log(data);
-        return content.innerHTML=`
+
+        const yeniKullanici = {
+
+            name: data.login,
+            bio: data.bio,
+            lokasyon: data.location
+
+        }
+        kullanicilar.push(yeniKullanici)
+        getKullanici()
+        eskiKullanicilar()
+        console.log(kullanicilar);
+
+        return content.innerHTML = `
         <div class="photo">
                 <img src="${data.avatar_url}" alt="">
             </div>
@@ -94,8 +147,10 @@ async function init() {
         `
 
         // document.body.insertAdjacentHTML('beforeend',content);
+
     })
-    
+
+
 }
 init();
 // busra bitis 
