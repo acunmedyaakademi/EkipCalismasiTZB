@@ -27,9 +27,68 @@ darkmode.addEventListener("click", (e) => {
 // zehra
 
 // busra
-// const button= document.querySelector(".button")
+const formData=document.querySelector(".search")
+const content=document.querySelector(".content")
+formData.addEventListener("submit",init)
 
-async function getData(){
-    const request=await fetch("https://api.github.com/users/")
+async function getData(user){
+    const request=await fetch(`https://api.github.com/users/${user}`);
+    const data=await request.json();
+    return data;
+}
+
+async function init(e) {
+    e.preventDefault();
+    const searchValue=formData["arama"].value;
+    const data= await getData(searchValue);
+    console.log(data.bio);
+    return content.innerHtml=`
+    <div class="photo">
+            <img src="assets/img/profilePhoto.png" alt="">
+        </div>
+
+        <div class="text-content">
+            <h3>${data.login}</h3>
+            <p>Katıldığı Tarih</p>
+            <div class="nickname">
+                <p>@username</p>
+                <div class="bio">
+                    <p>${data.bio}</p>
+                </div>
+                <div class="user-info">
+                    <div class="info">
+                        <p>Repos</p>
+                        <h4>?</h4>
+                    </div>
+                    <div class="info">
+                        <p>Followers</p>
+                        <h4>?</h4>
+                    </div>
+                    <div class="info">
+                        <p>Following</p>
+                        <h4>?</h4>
+                    </div>
+                </div>
+                <div class="user-internet">
+                    <div class="internet">
+                        <img src="assets/img/local.svg" alt="">
+                        <p>local</p>
+                    </div>
+                    <div class="internet">
+                        <img src="assets/img/x.svg" alt="">
+                        <p>Twitter</p>
+                    </div>
+                    <div class="internet">
+                        <img src="assets/img/link.svg" alt="">
+                        <p>Link</p>
+                    </div>
+                    <div class="internet">
+                        <img src="assets/img/office.svg" alt="">
+                        <p>Office</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `
 }
 // busra bitis 
