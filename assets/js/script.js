@@ -55,21 +55,13 @@ function eskiKullanicilar() {
     for (const kullanici of kullanicilar) {
 
 
-        yeniKullanicilar.innerHTML = `
-            <h2>${kullanici.name}</h2>
-            <h2>${kullanici.lokasyon}</h2>
-            <h2>${kullanici.bio}</h2>
-         
+        yeniKullanicilar.innerHTML += `
+        <h1>DAHA ÖNCE ARANAN KULLLANCILAR</h1>
+            <p>${kullanici.name}</p>
          `
     }
 
 }
-
-
-
-
-
-
 
 async function getData(user) {
     const request = await fetch(`https://api.github.com/users/${user}`);
