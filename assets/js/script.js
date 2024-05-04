@@ -30,6 +30,6 @@ darkmode.addEventListener("click", (e) => {
 // const button= document.querySelector(".button")
 
 async function getData(){
-    const
+    const request=await fetch("https://api.github.com/users/")
 }
 // busra bitis 
