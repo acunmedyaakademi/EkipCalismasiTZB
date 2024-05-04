@@ -48,7 +48,7 @@ async function init(e) {
         </div>
 
         <div class="text-content">
-            <h3>${data.login}</h3>
+            <h3>${data.name}</h3>
             <p>Katıldığı Tarih</p>
             <div class="nickname">
                 <p>@username</p>
