@@ -85,7 +85,6 @@ a{
 
 /* tufan  */
 
-/* tufan bitis */
 
 .content {
     /* padding: 44px 48px; */
@@ -99,9 +98,11 @@ a{
 }
 
 .photo {
-    padding: 48px;
+    padding: 28px;
 
     img {
+        max-width: 115px;
+        max-height: 115px;
         border-radius: 50%;
     }
 }
