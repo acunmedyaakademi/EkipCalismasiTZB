@@ -25,3 +25,11 @@ darkmode.addEventListener("click", (e) => {
 })
 
 // zehra
+
+// busra
+// const button= document.querySelector(".button")
+
+async function getData(){
+    const
+}
+// busra bitis 
