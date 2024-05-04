@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 *{
     margin: 0;
     padding: 0;
@@ -9,12 +6,40 @@
 /* zehra */
 /* zehra bitis */
 
-
-/* busra */
-.search{
-    width: 730px;
-    
+body{
+    background-color: rgb(233, 188, 225);
 }
+/* busra */
+
+.search{
+    margin-inline: auto;
+    max-width: 730px;
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    border-radius: 16px;
+    img{
+        margin-right: 15px;
+    }
+}
+input{
+    /* margin-bottom: 8px; */
+    width: 400px;
+    height: 30px;
+    border: none;
+    outline: none;
+}
+a{
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 
 /* busra bitis */
 
@@ -22,4 +47,3 @@
 /* tufan  */
 
 /* tufan bitis */
->>>>>>> busra
