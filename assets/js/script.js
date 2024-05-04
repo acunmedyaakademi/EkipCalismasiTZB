@@ -27,16 +27,25 @@ darkmode.addEventListener("click", (e) => {
 // zehra
 
 // busra
-const formData=document.querySelector(".search")
-const content=document.querySelector(".content")
+const formData = document.querySelector(".search")
+const content = document.querySelector(".content")
+formData.addEventListener("submit", init)
 
-async function getData(user){
-    const request=await fetch(`https://api.github.com/users/${user}`);
-    const data=await request.json();
+async function getData(user) {
+    const request = await fetch(`https://api.github.com/users/${user}`);
+    const data = await request.json();
     return data;
 }
 
-async function init() {
+async function init(e) {
+    e.preventDefault();
+    const searchValue = formData["arama"].value;
+    const data = await getData(searchValue);
+    console.log(data.bio);
+    return content.innerHtml = `
+    <div class="photo">
+            <img src="assets/img/profilePhoto.png" alt="">
+        </div>
 
     formData.addEventListener("submit",async function (e) {
         e.preventDefault();
