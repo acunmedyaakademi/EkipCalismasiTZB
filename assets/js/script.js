@@ -74,7 +74,7 @@ function eskiKullanicilar() {
 async function getData(user) {
     const request = await fetch(`https://api.github.com/users/${user}`);
     const data = await request.json();
-    return data;
+    return data
 }
 
 async function init() {
