@@ -37,15 +37,7 @@ async function getData(user) {
     return data;
 }
 
-async function init(e) {
-    e.preventDefault();
-    const searchValue = formData["arama"].value;
-    const data = await getData(searchValue);
-    console.log(data.bio);
-    return content.innerHtml = `
-    <div class="photo">
-            <img src="assets/img/profilePhoto.png" alt="">
-        </div>
+async function init() {
 
     formData.addEventListener("submit",async function (e) {
         e.preventDefault();
