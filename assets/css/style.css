@@ -1,7 +1,12 @@
-* {
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: "Space Mono";
 }
 
 /* zehra */
@@ -43,12 +48,111 @@
 /* zehra bitis */
 
 
-/* busra */
+.search{
+    margin-inline: auto;
+    max-width: 730px;
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    border-radius: 16px;
+    box-shadow: 0px 16px 30px -10px #4660bb33;
+    img{
+        margin-right: 15px;
+    }
+}
+input{
+    /* margin-bottom: 8px; */
+    width: 400px;
+    height: 30px;
+    border: none;
+    outline: none;
+}
+a{
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px;
+}
 
 
 /* busra bitis */
 
 
 /* tufan  */
+
+/* tufan bitis */
+
+.content {
+    /* padding: 44px 48px; */
+    margin-inline: auto;
+    max-width: 730px;
+    border-radius: 15px;
+    background: #FEFEFE;
+    box-shadow: 0px 16px 30px -10px #4660bb33;
+    margin-top: 20px;
+    display: flex;
+}
+
+.photo {
+    padding: 48px;
+
+    img {
+        border-radius: 50%;
+    }
+}
+
+.text-content {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    column-gap: 138px;
+    margin-top: 44px;
+    margin-left: 37px;
+}
+
+.nickname {
+    margin-bottom: 90px;
+
+    p {
+        color: #0079FF;
+        font-size: 16px;
+    }
+}
+
+.bio {
+    margin-top: 20px;
+
+    p {
+        color: #4B6A9B;
+        font-size: 15px;
+        line-height: 25px;
+    }
+}
+
+.user-info {
+    padding: 15px 10px 17px 10px;
+    border-radius: 10px;
+    background: #F6F8FF;
+    display: flex;
+    gap: 100px;
+    margin-top: 32px;
+}
+
+.user-internet {
+    margin-top: 37px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 20px;
+}
+
+.internet {
+    display: flex;
+    gap: 20px;
+}
 
 /* tufan bitis */
