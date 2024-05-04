@@ -1,12 +1,45 @@
-<<<<<<< HEAD
-
-=======
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 /* zehra */
+
+.darkMode {
+    display: flex;
+    justify-content: space-between;
+    max-width: 730px;
+    margin-inline: auto;
+    margin-top: 50px;
+}
+
+.sunmode {
+    cursor: pointer;
+    display: flex;
+    gap: 15px;
+
+    h3 {
+        color: #697c9a;
+    }
+}
+
+.darkmode {
+    display: none;
+    cursor: pointer;
+    display: flex;
+    gap: 15px;
+
+    h3 {
+        color: #fff;
+    }
+}
+
+.darkModeActive {
+    background-color: #141d2f;
+}
+
+
 /* zehra bitis */
 
 
@@ -19,4 +52,3 @@
 /* tufan  */
 
 /* tufan bitis */
->>>>>>> busra
