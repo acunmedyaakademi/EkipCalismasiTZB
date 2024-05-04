@@ -95,7 +95,7 @@ async function init() {
             </div>
     
             <div class="text-content">
-                <h3>${data.created_at}</h3>
+                <h3>${new Date(data.created_at).toDateString()}</h3>
                 <p>Katıldığı Tarih</p>
                 <div class="nickname">
                     <p>@${data.login}</p>
