@@ -47,6 +47,7 @@ let kullanicilar = JSON.parse(localStorage.getItem('kullanicilar')) || []
 const yeniKullanicilar = qs(".yeniKullanici")
 
 
+
 function eskiKullanicilar() {
 
     console.log(kullanicilar);
@@ -56,9 +57,24 @@ function eskiKullanicilar() {
 
 
         yeniKullanicilar.innerHTML = `
+
+        <img class="kullaniciimg" src="${kullanici.img}" alt="">
+
+        <div class="kullanici-div">
+            <h3>Kullanıcı Adı</h3>
             <h2>${kullanici.name}</h2>
+        </div>
+        <div class="kullanici-div">
+            <h3>Lokasyon</h3>
             <h2>${kullanici.lokasyon}</h2>
+        </div>
+        <div class="kullanici-div">
+            <h3>Bio</h3>
             <h2>${kullanici.bio}</h2>
+        </div>
+             
+          
+         
          
          `
     }
@@ -86,7 +102,7 @@ async function init() {
         console.log(data);
 
         const yeniKullanici = {
-
+            img: data.avatar_url,
             name: data.login,
             bio: data.bio,
             lokasyon: data.location
