@@ -1,5 +1,4 @@
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -48,7 +47,7 @@ body {
 /* zehra bitis */
 
 
-.search{
+.search {
     margin-inline: auto;
     max-width: 730px;
     background-color: white;
@@ -59,18 +58,21 @@ body {
     margin-top: 20px;
     border-radius: 16px;
     box-shadow: 0px 16px 30px -10px #4660bb33;
-    img{
+
+    img {
         margin-right: 15px;
     }
 }
-input{
+
+input {
     /* margin-bottom: 8px; */
     width: 400px;
     height: 30px;
     border: none;
     outline: none;
 }
-a{
+
+a {
     background-color: blue;
     color: white;
     text-decoration: none;
@@ -105,6 +107,12 @@ a{
         max-height: 115px;
         border-radius: 50%;
     }
+}
+
+.kullaniciimg {
+    max-width: 80px;
+    max-height: 80px;
+    border-radius: 50%;
 }
 
 .text-content {
@@ -154,6 +162,40 @@ a{
 .internet {
     display: flex;
     gap: 20px;
+}
+
+
+.yeniKullanici {
+    margin-top: 24px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #a6b6d0;
+    max-width: 730px;
+    display: flex;
+    gap: 10px;
+    margin-inline: auto;
+    box-shadow: 0px 16px 30px -10px #0f277f33;
+    margin-bottom: 20px;
+
+
+
+}
+
+/* .yeniKullanici {
+    display: none;
+} */
+
+.kullanici-div {
+
+    h2 {
+        margin-top: 15px;
+        font-weight: 10px;
+    }
+
+    h3 {
+        font-weight: 2px;
+
+    }
 }
 
 /* tufan bitis */
