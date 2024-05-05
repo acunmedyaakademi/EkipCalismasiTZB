@@ -72,7 +72,7 @@ input {
     outline: none;
 }
 
-a {
+button {
     background-color: blue;
     color: white;
     text-decoration: none;
