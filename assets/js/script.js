@@ -166,7 +166,7 @@ async function init() {
 
     })
 
-
+    eskiKullanicilar()
 }
 init();
 // busra bitis 
